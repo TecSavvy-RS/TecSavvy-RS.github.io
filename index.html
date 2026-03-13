@@ -121,7 +121,7 @@
                     <span class="tech-badge">Ing. Richard Schöll</span>
                 </div>
                 
-                <h1 class="text-6xl sm:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-12">
+                <h1 class="text-7xl sm:text-8xl font-black tracking-tighter uppercase leading-[0.85] mb-12">
                     Richard <br>Schöll.
                 </h1>
                 
@@ -197,6 +197,7 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Links: Das Problem & Interaktive Buttons -->
                 <div class="lg:col-span-1 space-y-8">
                     <div>
                         <h3 class="font-black uppercase text-sm mb-4 tracking-tight">Das Problem starrer Listen</h3>
@@ -209,6 +210,7 @@
                     </div>
                     
                     <div class="flex flex-col gap-2">
+                        <h4 class="mono text-[10px] font-bold text-sky-600 mb-2 uppercase tracking-widest">TecSavvy Strategy: Simple & Useful</h4>
                         <button class="tab-btn active px-4 py-3 mono text-[10px] font-bold uppercase tracking-tighter" onclick="showInfo('Fuzzy Logic', 'Vermeidet den Verlust von Wartungsnotizen bei Flugverschiebungen durch dynamisches Mapping.', this)">
                             > LOGIC: FUZZY_ID
                         </button>
@@ -218,13 +220,16 @@
                         <button class="tab-btn px-4 py-3 mono text-[10px] font-bold uppercase tracking-tighter" onclick="showInfo('WYSIWYG Print', '1:1 Skalierung für A4 Landscape Handover Protokolle ohne Spaltenumbruch.', this)">
                             > UX: PRECISION_PRINT
                         </button>
+                        <button class="tab-btn px-4 py-3 mono text-[10px] font-bold uppercase tracking-tighter" onclick="showInfo('Responsive Execution', 'Web-Technologie statt lokaler Software. Läuft ohne Installation auf jedem iPad, iPhone und Desktop im Netz.', this)">
+                            > WEB: RESPONSIVE_EXEC
+                        </button>
                     </div>
                 </div>
 
                 <div class="lg:col-span-2 space-y-12">
                     <div class="bg-white border-2 border-slate-900 p-8 relative overflow-hidden shadow-2xl">
                         <div class="absolute top-0 right-0 p-2 mono text-[8px] text-slate-300 font-bold tracking-widest uppercase">Gantt_Simulation_v2</div>
-                        <h4 class="mono font-bold text-xs mb-8 text-sky-600">> ENGINE: DELAY_RESISTANCE_DEMO</h4>
+                        <h4 class="mono font-bold text-xs mb-8 text-sky-600">> ENGINE: FUZZY_LOGIC_ID_V2 / DELAY_RESISTANCE_DEMO</h4>
                         
                         <div class="w-full space-y-6">
                             <div class="flex items-center gap-4">
@@ -236,7 +241,7 @@
                                 </div>
                             </div>
                             <div class="flex justify-between items-center mt-8 border-t border-slate-100 pt-4">
-                                <p class="text-[9px] text-slate-400 italic">Die Info klebt an der ID (OE-TEX_FLIGHT_DATE) – unabhängig von Delays.</p>
+                                <p class="text-[9px] text-slate-400 italic">Meine Logik bindet Daten an das Flugereignis. Die Info wandert bei Delays automatisch auf der Zeitachse mit.</p>
                                 <button onclick="simulateDelay()" class="px-6 py-2 bg-sky-600 text-white text-[10px] font-black mono uppercase hover:bg-sky-700 transition-colors shadow-lg active:scale-95">
                                     Simulate Delay +2h
                                 </button>
@@ -344,7 +349,7 @@
                 ],
                 datasets: [{
                     label: 'Expertise Spectrum',
-                    data: [100, 95, 90, 50, 40, 100],
+                    data: [100, 95, 90, 85, 80, 100],
                     backgroundColor: 'rgba(56, 189, 248, 0.25)',
                     borderColor: '#0ea5e9',
                     pointBackgroundColor: '#0ea5e9',
