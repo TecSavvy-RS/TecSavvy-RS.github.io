@@ -34,7 +34,7 @@
 
         .mono { font-family: 'JetBrains Mono', monospace; }
 
-        /* Optimierter Chart Container für bessere Lesbarkeit */
+        /* Optimierter Chart Container für maximale Lesbarkeit auf allen Displays */
         .chart-container {
             position: relative;
             width: 100%;
@@ -56,17 +56,6 @@
             text-transform: uppercase;
         }
 
-        .status-badge-poc {
-            background: #fef2f2;
-            color: #b91c1c;
-            border: 1px solid #fee2e2;
-            padding: 2px 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.65rem;
-            font-weight: 800;
-            border-radius: 4px;
-        }
-
         .tab-btn {
             border: 1px solid #e2e8f0;
             transition: all 0.2s ease;
@@ -83,13 +72,6 @@
             border-color: #0f172a;
         }
 
-        .interactive-card {
-            border-radius: 0;
-            border: 1px solid #e2e8f0;
-            background: white;
-            transition: all 0.2s ease;
-        }
-        
         .grid-bg {
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
             background-size: 24px 24px;
@@ -130,7 +112,7 @@
         </div>
     </nav>
 
-    <!-- 01: Identity Header (Status entfernt gem. Bild 3) -->
+    <!-- 01: Identity Header -->
     <header id="intro" class="pt-24 pb-16 bg-white border-b border-slate-200 relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="section-number">01</div>
@@ -164,7 +146,7 @@
         </div>
     </header>
 
-    <!-- 02: Philosophie (Style gem. Bild 1) -->
+    <!-- 02: Philosophie (Karten-Stil) -->
     <section id="problem" class="py-24 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="section-number">02</div>
@@ -175,25 +157,21 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">01</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Troubleshooting</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Systematische Fehleranalyse als Mindset – am Flieger wie im Code. Probleme bis zur Wurzel verfolgen.</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">02</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Simplicity</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Reduktion komplexer Datenströme auf das Wesentliche. WYSIWYG für maximale intuitive Erfassung.</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">03</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Usefulness</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Software, die im Hangar bei Stress echte Zeit spart, statt durch Komplexität zu bremsen.</p>
                 </div>
-                <!-- Card 4 (Dark Accent) -->
                 <div class="bg-slate-900 p-8 border-none shadow-xl">
                     <div class="text-3xl font-bold text-sky-400 mono mb-6">04</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider text-white">AI-Orchestration</h3>
@@ -203,7 +181,7 @@
         </div>
     </section>
 
-    <!-- 03: PoC Showcase (Layout gem. Bild 2) -->
+    <!-- 03: Showcase (Grid-Layout mit Buttons) -->
     <section id="poc" class="py-24 bg-white border-y border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="section-number">03</div>
@@ -219,7 +197,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                <!-- Links: Das Problem & Interaktive Buttons -->
                 <div class="lg:col-span-1 space-y-8">
                     <div>
                         <h3 class="font-black uppercase text-sm mb-4 tracking-tight">Das Problem starrer Listen</h3>
@@ -244,9 +221,7 @@
                     </div>
                 </div>
 
-                <!-- Rechts: Simulation & Skill Matrix -->
                 <div class="lg:col-span-2 space-y-12">
-                    <!-- Engine Simulation Box -->
                     <div class="bg-white border-2 border-slate-900 p-8 relative overflow-hidden shadow-2xl">
                         <div class="absolute top-0 right-0 p-2 mono text-[8px] text-slate-300 font-bold tracking-widest uppercase">Gantt_Simulation_v2</div>
                         <h4 class="mono font-bold text-xs mb-8 text-sky-600">> ENGINE: DELAY_RESISTANCE_DEMO</h4>
@@ -269,12 +244,10 @@
                         </div>
                     </div>
 
-                    <!-- Info Box für Buttons -->
                     <div id="info-box" class="p-6 bg-slate-900 text-sky-400 mono text-xs font-bold border-l-4 border-sky-500 animate-[fadeIn_0.3s] min-h-[80px]">
                         SYSTEM_READY: Select module for engineering details...
                     </div>
 
-                    <!-- Skill Matrix / Radar Chart -->
                     <div class="p-6 bg-slate-50 border border-slate-200 shadow-inner rounded-sm">
                         <h4 class="mono text-[10px] font-bold text-slate-400 mb-8 uppercase text-center tracking-widest">Cross-Domain Capability Spectrum</h4>
                         <div class="chart-container">
@@ -371,7 +344,7 @@
                 ],
                 datasets: [{
                     label: 'Expertise Spectrum',
-                    data: [100, 95, 90, 85, 80, 100],
+                    data: [100, 95, 90, 50, 40, 100],
                     backgroundColor: 'rgba(56, 189, 248, 0.25)',
                     borderColor: '#0ea5e9',
                     pointBackgroundColor: '#0ea5e9',
