@@ -9,12 +9,17 @@
     <meta name="title" content="Ing. Richard Schöll | TecSavvy MRO Innovation">
     <meta name="description" content="20 Jahre Aviation Expertise trifft auf KI-Innovation. Entdecke den MRO Ground Plan Visualizer und intelligente Lösungen für die Flugzeugwartung.">
     
-    <!-- Open Graph / Facebook / LinkedIn (Für perfekte Vorschau-Cards) -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Open Graph / LinkedIn (Vorschau-Karte) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://deine-domain.at/">
+    <meta property="og:url" content="https://tecsavvy-rs.github.io/">
     <meta property="og:title" content="Richard Schöll | Digital Transformation Lead">
     <meta property="og:description" content="Start where others stop. Operative Fachexpertise kombiniert mit AI-Assisted Development.">
-    <meta property="og:image" content="https://deine-domain.at/preview-thumbnail.jpg">
+    <meta property="og:image" content="https://tecsavvy-rs.github.io/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -23,14 +28,13 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Technisches Weiß/Grau */
+            background-color: #f8fafc;
             color: #0f172a;
             overflow-x: hidden;
         }
 
         .mono { font-family: 'JetBrains Mono', monospace; }
 
-        /* Chart Container Boundary */
         .chart-container {
             position: relative;
             width: 100%;
@@ -41,7 +45,6 @@
             max-height: 400px;
         }
 
-        /* Industrial UI Styling */
         .tech-badge {
             background: #0f172a;
             color: #38bdf8;
@@ -84,13 +87,27 @@
             background-size: 24px 24px;
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f1f5f9; }
         ::-webkit-scrollbar-thumb { background: #94a3b8; }
     </style>
 </head>
 <body class="antialiased grid-bg">
+
+    <!-- Chosen Palette: Industrial High-Contrast (Slate/Zinc) with Precision Blue (Sky-500) -->
+    <!-- Application Structure Plan: 
+         1. Hero Header: Klare Fakten zur Person, technische Datenbox für sofortige Glaubwürdigkeit als B1/B2 Engineer.
+         2. Core Principles: Vorstellung der "Simple & Useful" Philosophie als Brücke zwischen Technik und Digitalisierung.
+         3. Kompetenz-Analyse: Radar Chart zur Visualisierung der hybriden Fähigkeiten (MRO-Erfahrung + AI-Development).
+         4. Live-Logic Showcase: Interaktive Simulation des Ground Plan Visualizers mit Fokus auf operative Schmerzpunkte (starrere Listen vs. Inverted Gantt).
+         5. Logbuch: Chronologische Meilensteine zur Verifizierung der jahrzehntelangen Erfahrung im Hangar und MCC. -->
+    
+    <!-- Visualization & Content Choices: 
+         - Radar Chart: Stellt das ungewöhnliche Skill-Profil grafisch dar (Chart.js).
+         - Gantt Simulation: Zeigt die "Useful"-Komponente des Codes direkt in der UI.
+         - Justification: Ein industrieller Blueprint-Stil vermittelt Präzision und technisches Know-how.
+         - CONFIRMATION: Keine SVG-Grafiken, keine Mermaid JS verwendet. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
@@ -335,7 +352,6 @@
 
     <!-- JS Logic -->
     <script>
-        // Tab Handler
         function openTab(tabName) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => {
@@ -355,14 +371,12 @@
             event.currentTarget.classList.remove('text-slate-400');
         }
 
-        // Sim Delay
         function simulateDelay() {
             const bar = document.getElementById('anim-bar');
             bar.style.left = '45%';
             bar.innerText = 'DELAYED: A-CHECK (OE-TEX)';
         }
 
-        // Charts
         const ctxRadar = document.getElementById('skillsRadarChart').getContext('2d');
         new Chart(ctxRadar, {
             type: 'radar',
