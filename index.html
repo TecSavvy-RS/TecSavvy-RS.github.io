@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
-    <!-- NEU: FontAwesome Bibliothek laden (wird für das kleine LinkedIn-Icon benötigt) -->
+    <!-- FontAwesome Bibliothek für LinkedIn-Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <meta property="og:type" content="website">
@@ -37,11 +37,8 @@
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 50vh;
-            max-height: 400px;
+            height: 380px; /* Fixe Höhe verhindert das Abschneiden durch Chart.js */
+            margin: auto;
         }
 
         .tech-badge {
@@ -60,15 +57,18 @@
             background-size: 24px 24px;
         }
 
+        /* Optimierte Sektions-Nummerierung (Groß, Transparent, im Hintergrund) */
         .section-number {
-            font-size: 6rem;
+            font-size: 10rem;
             font-weight: 800;
-            color: #f1f5f9;
-            line-height: 1;
+            color: #cbd5e1;
+            line-height: 0.8;
             position: absolute;
-            top: -1rem;
+            top: -2rem;
             left: -1rem;
             z-index: -1;
+            opacity: 0.25;
+            user-select: none;
         }
 
         /* Accordion Animations */
@@ -81,7 +81,7 @@
             padding-bottom: 0;
         }
         .acc-content.open {
-            max-height: 800px; /* Groß genug für Screenshots */
+            max-height: 800px;
             opacity: 1;
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
@@ -110,7 +110,7 @@
                     <a href="#poc" class="hover:text-sky-600 transition-colors">/POC_DEMO</a>
                     <a href="#logs" class="hover:text-sky-600 transition-colors">/EXPERIENCE</a>
                     
-                    <!-- ANGEPASST: LINKEDIN BUTTON (Grau & Abgerundete Ecken) -->
+                    <!-- LINKEDIN BUTTON -->
                     <a href="https://www.linkedin.com/in/richard-sch%C3%B6ll-447799213/" target="_blank" class="text-slate-500 border border-slate-300 px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-800 transition-colors flex items-center gap-2 shadow-sm">
                         <i class="fa-brands fa-linkedin text-sm"></i> LINKEDIN
                     </a>
@@ -124,7 +124,7 @@
          ========================================= -->
     <header id="intro" class="pt-24 pb-16 bg-white border-b border-slate-200 relative overflow-hidden">
         
-        <!-- Wasserzeichen Logo (Rechte Seite) -->
+        <!-- Wasserzeichen Logo -->
         <div class="absolute right-[-5%] top-1/2 transform -translate-y-1/2 opacity-[0.08] pointer-events-none z-0 hidden md:block" style="-webkit-mask-image: radial-gradient(circle, black 45%, transparent 70%); mask-image: radial-gradient(circle, black 45%, transparent 70%);">
             <img src="logo.png" alt="TecSavvy Logo" class="w-[700px] h-auto grayscale mix-blend-multiply" />
         </div>
@@ -165,8 +165,8 @@
     <!-- =========================================
          SEKTION 02: PHILOSOPHIE
          ========================================= -->
-    <section id="philosophy" class="py-24 relative">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="philosophy" class="py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="section-number">02</div>
             <div class="mb-10">
                 <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-2">// PHILOSOPHIE_LOG</h2>
@@ -175,28 +175,24 @@
             </div>
         
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- KARTE 1 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">01</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Troubleshooting</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Systematische Fehleranalyse als Mindset – am Flieger wie im Code. Probleme bis zur Wurzel verfolgen.</p>
                 </div>
                 
-                <!-- KARTE 2 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">02</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Simplicity</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Reduktion komplexer Datenströme auf das Wesentliche. WYSIWYG für maximale intuitive Erfassung.</p>
                 </div>
                 
-                <!-- KARTE 3 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">03</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Usefulness</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Software, die im Hangar bei Stress echte Zeit spart, statt durch Komplexität zu bremsen.</p>
                 </div>
                 
-                <!-- KARTE 4 (Dunkler Hintergrund) -->
                 <div class="bg-slate-900 p-8 border-none shadow-xl">
                     <div class="text-3xl font-bold text-sky-400 mono mb-6">04</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider text-white">AI-Orchestration</h3>
@@ -209,8 +205,8 @@
     <!-- =========================================
          SEKTION 03: POC DEMO
          ========================================= -->
-    <section id="poc" class="py-24 bg-white border-y border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="poc" class="py-24 bg-white border-y border-slate-200 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="section-number">03</div>
             <div class="mb-12 border-b-2 border-slate-900 pb-8 flex justify-between items-end">
                 <div>
@@ -223,10 +219,23 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
-                <!-- LINKS: DAS AKKORDEON MENÜ -->
-                <div class="lg:col-span-3 space-y-4">
-                    <h4 class="mono text-[10px] font-bold text-sky-600 mb-4 uppercase tracking-widest">TecSavvy Strategy: Simple & Useful</h4>
+            <!-- NEUES GRID: 7 Spalten Links (Akkordeon), 5 Spalten Rechts (Radar) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- LINKS: PROBLEM & AKKORDEON -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- DIE WIEDERHERGESTELLTE PROBLEM-BOX -->
+                    <div class="bg-slate-50 border border-slate-200 p-6 shadow-sm rounded-sm">
+                        <h3 class="font-black uppercase text-sm mb-3 text-red-600">Das Problem starrer Listen</h3>
+                        <ul class="text-[13px] text-slate-600 space-y-2 list-disc pl-4">
+                            <li><strong>Keine Flexibilität:</strong> Statische Listen visualisieren keine echten Bodenzeiten (Inverted Gantt).</li>
+                            <li><strong>Datenverlust bei Delays:</strong> Manuelle Notizen verschieben sich nicht automatisch mit dem Flugplan mit.</li>
+                            <li><strong>Fehlende Übersicht:</strong> Eine intuitive Ansicht für die gesamte Flotte & LH-Group Airlines fehlt.</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mono text-[10px] font-bold text-sky-600 mb-2 uppercase tracking-widest pt-2">TecSavvy Strategy: Simple & Useful</h4>
                     
                     <div class="border border-slate-200 bg-white">
                         <button class="acc-btn w-full text-left px-6 py-4 flex justify-between items-center transition-colors hover:bg-slate-50" onclick="toggleAccordion('acc-1', this)">
@@ -291,9 +300,9 @@
                     </div>
                 </div>
 
-                <!-- RECHTS: RADAR DIAGRAMM -->
-                <div class="lg:col-span-2">
-                    <div class="p-6 bg-slate-50 border border-slate-200 shadow-inner rounded-sm sticky top-20">
+                <!-- RECHTS: RADAR DIAGRAMM (Breiter als vorher) -->
+                <div class="lg:col-span-5">
+                    <div class="p-6 bg-slate-50 border border-slate-200 shadow-inner rounded-sm sticky top-24 w-full overflow-hidden">
                         <h4 class="mono text-[10px] font-bold text-slate-400 mb-8 uppercase text-center tracking-widest">Cross-Domain Capability Spectrum</h4>
                         <div class="chart-container">
                             <canvas id="skillsRadarChart"></canvas>
@@ -308,16 +317,15 @@
     <!-- =========================================
          SEKTION 04: EXPERIENCE (LOGS)
          ========================================= -->
-    <section id="logs" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="section-number text-slate-800">04</div>
+    <section id="logs" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="section-number text-slate-800 opacity-40">04</div>
             <div class="mb-16">
                 <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-sky-400 mb-4">// SERVICE_LOGS: VERIFICATION</h2>
                 <h3 class="text-4xl font-black uppercase tracking-tight">Zwei Jahrzehnte technischer Verantwortung.</h3>
             </div>
             
             <div class="space-y-16 relative border-l-2 border-slate-700 pl-10 ml-4">
-                <!-- TIMELINE ITEM 1 -->
                 <div class="relative">
                     <span class="absolute -left-[51px] top-1 w-6 h-6 bg-sky-500 rounded-full border-4 border-slate-900 shadow-md"></span>
                     <h3 class="text-2xl font-black uppercase leading-tight text-white mb-2">Digital Transformation Lead & Expert</h3>
@@ -325,7 +333,6 @@
                     <p class="text-base text-slate-400 leading-relaxed">Bau der Brücke zwischen operativer Front und IT. Entwicklung von PoCs (wie dem Visualizer), die heute den Schmerz der Ineffizienz lindern.</p>
                 </div>
 
-                <!-- TIMELINE ITEM 2 -->
                 <div class="relative">
                     <span class="absolute -left-[51px] top-1 w-6 h-6 bg-slate-600 rounded-full border-4 border-slate-900"></span>
                     <h3 class="text-xl font-bold uppercase text-slate-100 mb-2">Flight Test & Flying Station Engineer</h3>
@@ -333,7 +340,6 @@
                     <p class="text-base text-slate-400 leading-relaxed">Troubleshooting unter Realbedingungen. Hier habe ich gelernt, dass Software nur dann gut ist, wenn sie in Stress-Situationen sofort hilft.</p>
                 </div>
 
-                <!-- TIMELINE ITEM 3 -->
                 <div class="relative opacity-60">
                     <span class="absolute -left-[51px] top-1 w-6 h-6 bg-slate-800 rounded-full border-4 border-slate-900"></span>
                     <h3 class="text-xl font-bold uppercase text-slate-400 mb-2">Certifying Technician B1.1 / B2</h3>
