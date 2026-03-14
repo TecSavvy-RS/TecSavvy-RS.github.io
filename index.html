@@ -104,16 +104,14 @@
                     <span class="tech-badge">TECSAVVY_SOLUTIONS</span>
                 </div>
                 
-                <!-- MENÜ-LINKS: Das href="#name" verweist immer auf die "id" der jeweiligen Sektion weiter unten! -->
                 <div class="flex items-center space-x-6 mono text-[10px] font-bold">
                     <a href="#intro" class="hover:text-sky-600 transition-colors">/IDENTITY</a>
-                    <!-- HIER ANGEPASST: Sucht jetzt nach id="philosophy" anstatt id="problem" -->
                     <a href="#philosophy" class="hover:text-sky-600 transition-colors">/PHILOSOPHY</a>
                     <a href="#poc" class="hover:text-sky-600 transition-colors">/POC_DEMO</a>
                     <a href="#logs" class="hover:text-sky-600 transition-colors">/EXPERIENCE</a>
                     
-                    <!-- NEU: LINKEDIN BUTTON (target="_blank" öffnet einen neuen Tab) -->
-                    <a href="https://www.linkedin.com/in/richard-sch%C3%B6ll-447799213/" target="_blank" class="text-sky-600 border border-sky-200 px-3 py-1 rounded-sm hover:bg-sky-50 transition-colors flex items-center gap-2">
+                    <!-- ANGEPASST: LINKEDIN BUTTON (Grau & Abgerundete Ecken) -->
+                    <a href="https://www.linkedin.com/in/richard-sch%C3%B6ll-447799213/" target="_blank" class="text-slate-500 border border-slate-300 px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-800 transition-colors flex items-center gap-2 shadow-sm">
                         <i class="fa-brands fa-linkedin text-sm"></i> LINKEDIN
                     </a>
                 </div>
@@ -123,11 +121,10 @@
 
     <!-- =========================================
          SEKTION 01: IDENTITY (HEADER)
-         id="intro" verbindet sich mit href="#intro" aus dem Menü
          ========================================= -->
     <header id="intro" class="pt-24 pb-16 bg-white border-b border-slate-200 relative overflow-hidden">
         
-        <!-- Wasserzeichen Logo (Rechte Seite) - Fix: Weiche Kanten durch CSS Maske -->
+        <!-- Wasserzeichen Logo (Rechte Seite) -->
         <div class="absolute right-[-5%] top-1/2 transform -translate-y-1/2 opacity-[0.08] pointer-events-none z-0 hidden md:block" style="-webkit-mask-image: radial-gradient(circle, black 45%, transparent 70%); mask-image: radial-gradient(circle, black 45%, transparent 70%);">
             <img src="logo.png" alt="TecSavvy Logo" class="w-[700px] h-auto grayscale mix-blend-multiply" />
         </div>
@@ -145,7 +142,6 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
                     <div class="lg:col-span-2 border-l-8 border-slate-900 pl-8 flex flex-col justify-center">
-                        <!-- DEIN HAUPT-TEXT (Hier kannst du deinen Pitch verändern) -->
                         <p class="text-3xl text-slate-800 font-bold leading-tight mb-4">
                             Fokus: Operative Effizienz & <span class="text-sky-600">TecSavvy Solutions</span>
                         </p>
@@ -154,7 +150,6 @@
                         </p>
                     </div>
                     
-                    <!-- DIE DUNKLE INFO-BOX (RECHTS) -->
                     <div class="bg-slate-900 p-8 mono text-xs space-y-3 text-slate-300 shadow-2xl rounded-sm">
                         <div class="flex justify-between border-b border-slate-700 pb-2 text-slate-500"><span>REGISTRY</span><span>DATA_POINT</span></div>
                         <div class="flex justify-between"><span class="text-sky-400">LICENSE</span><span class="font-bold text-white uppercase">CAT B1.1 / B2</span></div>
@@ -169,7 +164,6 @@
 
     <!-- =========================================
          SEKTION 02: PHILOSOPHIE
-         id="philosophy" verbindet sich mit href="#philosophy" aus dem Menü
          ========================================= -->
     <section id="philosophy" class="py-24 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,38 +172,45 @@
                 <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-slate-400 mb-2">// PHILOSOPHIE_LOG</h2>
                 <p class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-6">Kein Blabla. Nur Lösungen.</p>
                 <p class="text-lg text-slate-500 max-w-2xl leading-relaxed">Digitalisierung in der Luftfahrt muss die rauen Bedingungen des 24/7 Betriebs aushalten. Mein Ansatz ist radikal anwenderzentriert: Software muss Zeit sparen, nicht erzeugen.</p>
-        </div>
+            </div>
         
-        <!-- GRID FÜR DIE 4 KARTEN (1 Spalte auf Handy, 2 auf Tablet, 4 auf Desktop) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- KARTE 1 -->
-            <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-3xl font-bold text-sky-500 mono mb-6">01</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- KARTE 1 -->
+                <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl font-bold text-sky-500 mono mb-6">01</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Troubleshooting</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Systematische Fehleranalyse als Mindset – am Flieger wie im Code. Probleme bis zur Wurzel verfolgen.</p>
                 </div>
+                
+                <!-- KARTE 2 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <div class="text-3xl font-bold text-sky-500 mono mb-6">02</div>
                     <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Simplicity</h3>
                     <p class="text-xs text-slate-400 leading-relaxed">Reduktion komplexer Datenströme auf das Wesentliche. WYSIWYG für maximale intuitive Erfassung.</p>
                 </div>
+                
+                <!-- KARTE 3 -->
                 <div class="bg-white p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-            <!-- KARTE 4 (Dunkler Hintergrund) -->
-            <div class="bg-slate-900 p-8 border-none shadow-xl">
-                <div class="text-3xl font-bold text-sky-400 mono mb-6">04</div>
-                <h3 class="font-black uppercase text-sm mb-4 tracking-wider text-white">AI-Orchestration</h3>
-                <p class="text-xs text-slate-400 leading-relaxed">Nutzung von KI zur radikalen Beschleunigung von Entwicklungszyklen und Logik-Validierung.</p>
+                    <div class="text-3xl font-bold text-sky-500 mono mb-6">03</div>
+                    <h3 class="font-black uppercase text-sm mb-4 tracking-wider">Usefulness</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Software, die im Hangar bei Stress echte Zeit spart, statt durch Komplexität zu bremsen.</p>
+                </div>
+                
+                <!-- KARTE 4 (Dunkler Hintergrund) -->
+                <div class="bg-slate-900 p-8 border-none shadow-xl">
+                    <div class="text-3xl font-bold text-sky-400 mono mb-6">04</div>
+                    <h3 class="font-black uppercase text-sm mb-4 tracking-wider text-white">AI-Orchestration</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Nutzung von KI zur radikalen Beschleunigung von Entwicklungszyklen und Logik-Validierung.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================================
-     SEKTION 03: POC DEMO (AKKORDEON & SCREENSHOTS)
-     id="poc" verbindet sich mit href="#poc" aus dem Menü
-     ========================================= -->
-<section id="poc" class="py-24 bg-white border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- =========================================
+         SEKTION 03: POC DEMO
+         ========================================= -->
+    <section id="poc" class="py-24 bg-white border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="section-number">03</div>
             <div class="mb-12 border-b-2 border-slate-900 pb-8 flex justify-between items-end">
                 <div>
@@ -223,21 +224,17 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            
-            <!-- LINKS: DAS AKKORDEON MENÜ -->
-            <div class="lg:col-span-3 space-y-4">
-                <h4 class="mono text-[10px] font-bold text-sky-600 mb-4 uppercase tracking-widest">TecSavvy Strategy: Simple & Useful</h4>
-                
-                <!-- MODULE 1: FUZZY LOGIC (Beispiel für einen Akkordeon-Reiter) -->
-                <div class="border border-slate-200 bg-white">
-                    <!-- BUTTON: Das onclick="toggleAccordion('acc-1', this)" öffnet den Bereich mit der id="acc-1" -->
-                    <button class="acc-btn w-full text-left px-6 py-4 flex justify-between items-center transition-colors hover:bg-slate-50" onclick="toggleAccordion('acc-1', this)">
-                        <span class="mono text-xs font-bold uppercase tracking-widest">> LOGIC: FUZZY_ID</span>
-                        <span class="acc-icon font-mono font-bold text-xl leading-none text-slate-400">+</span>
-                    </button>
-                    <!-- INHALT: id="acc-1" gehört zum Button oben -->
-                    <div id="acc-1" class="acc-content px-6 bg-slate-50 border-t border-slate-200">
-                        <p class="text-sm text-slate-600 mb-6 italic">Meine Logik bindet Daten an das Flugereignis. Die Info wandert bei Delays automatisch auf der Zeitachse mit.</p>
+                <!-- LINKS: DAS AKKORDEON MENÜ -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="mono text-[10px] font-bold text-sky-600 mb-4 uppercase tracking-widest">TecSavvy Strategy: Simple & Useful</h4>
+                    
+                    <div class="border border-slate-200 bg-white">
+                        <button class="acc-btn w-full text-left px-6 py-4 flex justify-between items-center transition-colors hover:bg-slate-50" onclick="toggleAccordion('acc-1', this)">
+                            <span class="mono text-xs font-bold uppercase tracking-widest">> LOGIC: FUZZY_ID</span>
+                            <span class="acc-icon font-mono font-bold text-xl leading-none text-slate-400">+</span>
+                        </button>
+                        <div id="acc-1" class="acc-content px-6 bg-slate-50 border-t border-slate-200">
+                            <p class="text-sm text-slate-600 mb-6 italic">Meine Logik bindet Daten an das Flugereignis. Die Info wandert bei Delays automatisch auf der Zeitachse mit.</p>
                             
                             <div class="bg-white border-2 border-slate-900 p-6 relative shadow-md">
                                 <h4 class="mono font-bold text-[10px] mb-6 text-sky-600 uppercase">> ENGINE: DELAY_RESISTANCE_DEMO</h4>
@@ -267,8 +264,6 @@
                         </button>
                         <div id="acc-2" class="acc-content px-6 bg-slate-50 border-t border-slate-200">
                             <p class="text-sm text-slate-600 mb-6 italic">Kritische Flugdaten liegen auf dem Server, individuelle Sticky-Notes zur Arbeitsorganisation bleiben sicher lokal am Gerät.</p>
-                            
-                            <!-- Das Bild wird hier automatisch geladen, sobald die Datei screenshot_1.png auf GitHub liegt -->
                             <img src="dashboard.PNG" alt="Screenshot Hybrid Store" class="w-full h-auto border border-slate-300 shadow-md rounded-sm" onerror="this.style.display='none'" />
                         </div>
                     </div>
@@ -280,8 +275,6 @@
                         </button>
                         <div id="acc-3" class="acc-content px-6 bg-slate-50 border-t border-slate-200">
                             <p class="text-sm text-slate-600 mb-6 italic">Garantierte 1:1 Skalierung für A4 Landscape Handover Protokolle. Kein verrutschtes Layout, kein Spaltenumbruch beim Drucken.</p>
-                            
-                            <!-- Das Bild wird hier automatisch geladen, sobald die Datei screenshot_2.png auf GitHub liegt -->
                             <img src="print.PNG" alt="Screenshot Print" class="w-full h-auto border border-slate-300 shadow-md rounded-sm" onerror="this.style.display='none'" />
                         </div>
                     </div>
@@ -293,61 +286,88 @@
                         </button>
                         <div id="acc-4" class="acc-content px-6 bg-slate-50 border-t border-slate-200">
                             <p class="text-sm text-slate-600 mb-6 italic">Web-Technologie statt lokaler Software. Läuft ohne Installation flüssig auf jedem iPad, iPhone und Desktop-Rechner im Netz.</p>
-                            
-                            <!-- Das Bild wird hier automatisch geladen, sobald die Datei screenshot_3.png auf GitHub liegt -->
-                    <img src="screenshot_3.png" alt="Screenshot Mobile/iPad" class="w-full h-auto border border-slate-300 shadow-md rounded-sm" onerror="this.style.display='none'" />
+                            <img src="screenshot_3.png" alt="Screenshot Mobile/iPad" class="w-full h-auto border border-slate-300 shadow-md rounded-sm" onerror="this.style.display='none'" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- RECHTS: RADAR DIAGRAMM -->
-        <div class="lg:col-span-2">
-            <div class="p-6 bg-slate-50 border border-slate-200 shadow-inner rounded-sm sticky top-20">
+                <!-- RECHTS: RADAR DIAGRAMM -->
+                <div class="lg:col-span-2">
+                    <div class="p-6 bg-slate-50 border border-slate-200 shadow-inner rounded-sm sticky top-20">
                         <h4 class="mono text-[10px] font-bold text-slate-400 mb-8 uppercase text-center tracking-widest">Cross-Domain Capability Spectrum</h4>
                         <div class="chart-container">
                             <canvas id="skillsRadarChart"></canvas>
                         </div>
-</section>
+                    </div>
+                </div>
 
-<!-- =========================================
-     SEKTION 04: EXPERIENCE (LOGS)
-     id="logs" verbindet sich mit href="#logs" aus dem Menü
-     ========================================= -->
-<section id="logs" class="py-24 bg-slate-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-number text-slate-800">04</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SEKTION 04: EXPERIENCE (LOGS)
+         ========================================= -->
+    <section id="logs" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-number text-slate-800">04</div>
             <div class="mb-16">
                 <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-sky-400 mb-4">// SERVICE_LOGS: VERIFICATION</h2>
                 <h3 class="text-4xl font-black uppercase tracking-tight">Zwei Jahrzehnte technischer Verantwortung.</h3>
             </div>
-</section>
-
-<!-- =========================================
-     FOOTER (GANZ UNTEN)
-     ========================================= -->
-<footer class="bg-black py-16 border-t border-slate-800 text-center">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-2xl font-black text-white uppercase tracking-widest italic mb-8 leading-none">The Practitioner's Edge.</h2>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6 opacity-40 mb-10">
-            <span class="mono text-[9px] text-white uppercase tracking-widest">ING. RICHARD SCHÖLL</span>
-            <span class="w-1 h-1 bg-white rounded-full hidden md:block"></span>
-            <span class="mono text-[9px] text-white uppercase tracking-widest">TECSAVVY_CORE_SYSTEM</span>
-            <span class="w-1 h-1 bg-white rounded-full hidden md:block"></span>
-            <span class="mono text-[9px] text-white uppercase tracking-widest">PoC_V2.1.8_STABLE_BUILD</span>
-            <span class="w-1 h-1 bg-white rounded-full hidden md:block"></span>
             
-            <!-- NEU: LINKEDIN LINK IM FOOTER -->
-            <a href="https://www.linkedin.com/in/richard-sch%C3%B6ll-447799213/" target="_blank" class="mono text-[9px] text-sky-400 hover:text-sky-300 uppercase tracking-widest transition-colors border-b border-sky-400 pb-0.5">LINKEDIN PROFILE</a>
-        </div>
-        <p class="text-[10px] text-slate-600 uppercase tracking-widest">Built with passion and AI assistance to improve Tech Ops.</p>
-    </div>
-</footer>
+            <div class="space-y-16 relative border-l-2 border-slate-700 pl-10 ml-4">
+                <!-- TIMELINE ITEM 1 -->
+                <div class="relative">
+                    <span class="absolute -left-[51px] top-1 w-6 h-6 bg-sky-500 rounded-full border-4 border-slate-900 shadow-md"></span>
+                    <h3 class="text-2xl font-black uppercase leading-tight text-white mb-2">Digital Transformation Lead & Expert</h3>
+                    <p class="text-xs font-bold text-sky-400 uppercase tracking-[0.2em] mb-4 italic">Austrian Airlines | Fokus: MRO Innovation</p>
+                    <p class="text-base text-slate-400 leading-relaxed">Bau der Brücke zwischen operativer Front und IT. Entwicklung von PoCs (wie dem Visualizer), die heute den Schmerz der Ineffizienz lindern.</p>
+                </div>
 
-<!-- =========================================
-     JAVASCRIPT (LOGIK FÜR ANIMATIONEN & DIAGRAMM)
-     ========================================= -->
-<script>
-    // --- Delay Simulation ---
+                <!-- TIMELINE ITEM 2 -->
+                <div class="relative">
+                    <span class="absolute -left-[51px] top-1 w-6 h-6 bg-slate-600 rounded-full border-4 border-slate-900"></span>
+                    <h3 class="text-xl font-bold uppercase text-slate-100 mb-2">Flight Test & Flying Station Engineer</h3>
+                    <p class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-4 italic">VIE & Outstations | High Pressure Environments</p>
+                    <p class="text-base text-slate-400 leading-relaxed">Troubleshooting unter Realbedingungen. Hier habe ich gelernt, dass Software nur dann gut ist, wenn sie in Stress-Situationen sofort hilft.</p>
+                </div>
+
+                <!-- TIMELINE ITEM 3 -->
+                <div class="relative opacity-60">
+                    <span class="absolute -left-[51px] top-1 w-6 h-6 bg-slate-800 rounded-full border-4 border-slate-900"></span>
+                    <h3 class="text-xl font-bold uppercase text-slate-400 mb-2">Certifying Technician B1.1 / B2</h3>
+                    <p class="text-xs font-bold text-slate-600 uppercase tracking-[0.2em] mb-4 italic">The Operational Core</p>
+                    <p class="text-base text-slate-500 leading-relaxed">Physische Wartung und gesetzliche Freigabeverantwortung für den Flugbetrieb.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+    <footer class="bg-black py-16 border-t border-slate-800 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-black text-white uppercase tracking-widest italic mb-8 leading-none">The Practitioner's Edge.</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 opacity-40 mb-10">
+                <span class="mono text-[9px] text-white uppercase tracking-widest">ING. RICHARD SCHÖLL</span>
+                <span class="w-1 h-1 bg-white rounded-full hidden md:block"></span>
+                <span class="mono text-[9px] text-white uppercase tracking-widest">TECSAVVY_CORE_SYSTEM</span>
+                <span class="w-1 h-1 bg-white rounded-full hidden md:block"></span>
+                <span class="mono text-[9px] text-white uppercase tracking-widest">PoC_V2.1.8_STABLE_BUILD</span>
+                <span class="w-1 h-1 bg-white rounded-full hidden md:block"></span>
+                
+                <a href="https://www.linkedin.com/in/richard-sch%C3%B6ll-447799213/" target="_blank" class="mono text-[9px] text-sky-400 hover:text-sky-300 uppercase tracking-widest transition-colors border-b border-sky-400 pb-0.5">LINKEDIN PROFILE</a>
+            </div>
+            <p class="text-[10px] text-slate-600 uppercase tracking-widest">Built with passion and AI assistance to improve Tech Ops.</p>
+        </div>
+    </footer>
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+    <script>
         function simulateDelay() {
             const bar = document.getElementById('anim-bar');
             bar.style.left = '45%';
@@ -355,14 +375,12 @@
             bar.classList.add('bg-red-600');
         }
 
-        // --- Accordion Logic ---
         function toggleAccordion(contentId, btnElement) {
             const allContents = document.querySelectorAll('.acc-content');
             const allBtns = document.querySelectorAll('.acc-btn');
             const targetContent = document.getElementById(contentId);
             const isOpen = targetContent.classList.contains('open');
 
-            // Reset all
             allContents.forEach(content => content.classList.remove('open'));
             allBtns.forEach(btn => {
                 btn.classList.remove('bg-slate-900', 'text-white');
@@ -370,7 +388,6 @@
                 btn.querySelector('.acc-icon').classList.remove('text-sky-400');
             });
 
-            // If it wasn't open, open it
             if (!isOpen) {
                 targetContent.classList.add('open');
                 btnElement.classList.add('bg-slate-900', 'text-white');
@@ -380,7 +397,6 @@
             }
         }
 
-        // --- Radar Chart ---
         const ctxRadar = document.getElementById('skillsRadarChart').getContext('2d');
         new Chart(ctxRadar, {
             type: 'radar',
