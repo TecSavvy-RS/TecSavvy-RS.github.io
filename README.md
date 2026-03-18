@@ -1,4 +1,4 @@
-# TecSavvy-RS.github.io
+# TecSavvy-Solutions.github.io
 TecSavvy MRO Ground Plan Visualizer (VIE) - V2.1.8
 
 Motto: Start where others stop | Keep it simple & useful
